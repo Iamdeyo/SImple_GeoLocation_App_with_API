@@ -35,7 +35,7 @@
                          Location - {{data.city}}
                      </h1>
                     </div>
-                    <table class="table table-dark">
+                    <table class="table table-dark table-striped table-hover">
                         <tbody>
                           <tr>
                             <th scope="col">IP</th>
@@ -70,6 +70,10 @@
                             <th scope="row">Service Provider</th>
                             <td colspan="2">{{data.isp}}</td>
                           </tr>
+                          <tr>
+                            <th scope="row">TimeZone</th>
+                            <td colspan="2">{{data.timezone}}</td>
+                          </tr>
                         </tbody>
                     </table>
                     <!-- <div class="list-group">
@@ -81,6 +85,15 @@
               </div>
             </div>
           </div>
+
+        <footer class="text-center text-lg-start text-white fixed-bottom" style="background-color: #3e4551">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
     
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

@@ -10,14 +10,16 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="{% url 'index' %}"> DEYO SHOWMYIP</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" href="{% url 'index' %}">
+                        Home
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -29,33 +31,52 @@
               <div class="col-12 col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-header">
-                     Location -
+                     <h1>
+                         Location - {{data.city}}
+                     </h1>
                     </div>
                     <table class="table table-dark">
-                        <thead>
-                          <tr>
-                            <th scope="col">IP</th>
-                            <th scope="col">First</th>
-                          </tr>
-                        </thead>
                         <tbody>
                           <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            
+                            <th scope="col">IP</th>
+                            <th scope="col">{{data.query}}</th>
                           </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                           
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
                         
+                        
+                          <tr>
+                            <th scope="row">Country</th>
+                            <td>{{data.country}}</td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row"> Country Code</th>
+                            <td>{{data.countryCode}}</td>
+                          </tr>
+                          
+                          <tr>
+                            <th scope="row">City</th>
+                            <td colspan="2">{{data.city}}</td>
+                          </tr>
+                          
+                          <tr>
+                            <th scope="row">Region</th>
+                            <td colspan="2">{{data.regionName}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Zip Code</th>
+                            <td colspan="2">{{data.zip}}</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Service Provider</th>
+                            <td colspan="2">{{data.isp}}</td>
                           </tr>
                         </tbody>
-                      </table>
+                    </table>
+                    <!-- <div class="list-group">
+                        <h3>
+                            {{data}}
+                        </h3>
+                    </div> -->
                 </div>
               </div>
             </div>
